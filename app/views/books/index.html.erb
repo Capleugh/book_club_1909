@@ -2,13 +2,13 @@
 
 <% @books.each do |book| %>
 <section id="book-<%= book.id %>">
-  <%= link_to book.title, "/books/#{book.id}" %>
-  <%= book.publication_year %>
-  <%= book.pages %>
-  <% book.authors.each do |author| %>
+  <p>Title: <%= link_to book.title, "/books/#{book.id}" %></p>
+  <p>Publication Year: <%= book.publication_year %></p>
+  <p>Number of Pages: <%= book.pages %></p>
+  <p>Author Name(s): <% book.authors.each do |author| %></p>
     <section id="author-<%= author.id %>">
       <%= link_to author.name, "/authors/#{author.id}" %>
     </section>
   <% end %>
-</section>
+</section><br>
 <% end %>
