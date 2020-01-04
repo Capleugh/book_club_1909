@@ -5,5 +5,10 @@
   <%= link_to book.title, "/books/#{book.id}" %>
   <%= book.publication_year %>
   <%= book.pages %>
+  <% book.authors.each do |author| %>
+    <section id="author-<%= author.id %>">
+      <%= link_to author.name, "/authors/#{author.id}" %>
+    </section>
+  <% end %>
 </section>
 <% end %>
