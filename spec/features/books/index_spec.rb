@@ -40,10 +40,11 @@ RSpec.describe "As a visitor" do
         expect(current_path).to eq("/authors/#{author_1.id}")
       end
 
-      within "#author-#{author_2.id}" do
-        click_link "#{author_2.name}"
-        expect(current_path).to eq("/authors/#{author_2.id}")
-      end
+    # within "#book-#{book_1.id}" do
+    #   within "#author-#{author_2.id}" do
+    #     click_link "#{author_2.name}"
+    #     expect(current_path).to eq("/authors/#{author_2.id}")
+    #   end
     end
   end
 end
